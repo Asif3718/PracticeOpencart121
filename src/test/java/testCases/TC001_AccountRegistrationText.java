@@ -15,18 +15,18 @@ public class TC001_AccountRegistrationText extends BaseClass {
 	void verify_account_registration()
 	{
 		try {
-		//logger.info("***** Starting TC001_AccountRegistrationTest *****");
+		logger.info("***** Starting TC001_AccountRegistrationTest *****");
 		
 		HomePage hp=new HomePage(driver);
 		hp.clickMyAccount();
-		//logger.info("***** Clicked on MyAccount Link *****");
+		logger.info("***** Clicked on MyAccount Link *****");
 		
 		hp.clickRegister();
-		//logger.info("***** Clicked on Register Link *****");
+		logger.info("***** Clicked on Register Link *****");
 		
 		AccountRegistrationPage regpage=new AccountRegistrationPage(driver);
 		
-		//logger.info("***** Providing Customer Details *****");
+		logger.info("***** Providing Customer Details *****");
 		regpage.setFirstName(randomString().toUpperCase());
 		regpage.setLastName(randomString().toUpperCase());
 		regpage.setEmail(randomString()+"@gmail.com");
@@ -38,7 +38,7 @@ public class TC001_AccountRegistrationText extends BaseClass {
 		regpage.setPrivacyPolicy();
 		regpage.clickContinue();
 		
-		//logger.info("***** Validating expected message *****");
+		logger.info("***** Validating expected message *****");
 		String confmsg=regpage.getConfirmationMsg();
 		
 		if(confmsg.equals("Your Account Has Been Created!"))
@@ -47,18 +47,18 @@ public class TC001_AccountRegistrationText extends BaseClass {
 		}
 		else
 		{
-			//logger.error("Test Failed..");
-			//logger.debug("Debug logs...");
+			logger.error("Test Failed..");
+			logger.debug("Debug logs...");
 			Assert.assertTrue(false);
 		}
-		//Assert.assertEquals(confmsg, "Your Account Has Been Created!");
+		
 		}
 	catch(Exception e)
 	{		
 		Assert.fail();
 	}
 		
-		//logger.info("***** Finished TC001_AccountRegistrationTest *****");
+		logger.info("***** Finished TC001_AccountRegistrationTest *****");
 	}
 	
 

@@ -10,12 +10,12 @@
  </listeners>  
  
   <test thread-count="5" name="Test">
-  <parameter name="os" value="Windows"></parameter>
+  <parameter name="os" value="Linux"></parameter>
   <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testCases.TC001_AccountRegistrationText"/> 
-      <class name="testCases.TC002_LoginTest"/>
-      <!--<class name="testCases.TC003_LoginDDT"/> -->
+     <!-- <class name="testCases.TC002_LoginTest"/>-->
+      <!--<class name="testCases.TC003_LoginDDT"/>  -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -19,8 +19,7 @@ public class MyAccountPage extends BasePage {
 	
 	public void clickLogout()
 	{
-		btnLogout.click();
-				
+		btnLogout.click();				
 	}
 	
 	public boolean isMyAccountExist()

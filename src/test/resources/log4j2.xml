@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration status="Off">
  
   <!-- Define properties -->
   <Properties>
@@ -14,9 +14,10 @@
     </Console>
 
     <!-- Rolling File Appender using properties -->
-    <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+    <RollingFile name="File" fileName="${basePath}/automation.log" 
+    filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
        <PatternLayout Pattern="%d{HH:mm:ss.SSS} [%t] %-5level %loggger{36} - %msg%n"/>
-         <SizeBasedTriggeringPolicy size="50000" />
+         <SizeBasedTriggeringPolicy size="50000"/>
          </RollingFile>
 
 
@@ -24,7 +25,7 @@
 
   <Loggers>
     <!-- Root logger references the console and rolling appenders -->
-    <Root level="off">
+    <Root level="Off">
       <!--<AppenderRef ref="Console"/> -->
       <AppenderRef ref="File"/>
     </Root>

@@ -12,8 +12,7 @@ public class TC002_LoginTest extends BaseClass{
 	@Test(groups={"Sanity", "Master"})
 	public void verify_login()
 	{
-		logger.info("***** Starting TC002 LoginTest *****");
-		
+		//logger.info("***** Starting TC002 LoginTest *****");
 		try {
 		HomePage hp=new HomePage(driver);
 		hp.clickMyAccount();
@@ -36,7 +35,7 @@ public class TC002_LoginTest extends BaseClass{
 			System.out.println(e.getMessage());
 		}
 		
-		logger.info("***** Finish TC002 LoginTest *****");
+		//logger.info("***** Finish TC002 LoginTest *****");
 		
 		
 		
